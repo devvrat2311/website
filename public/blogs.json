@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "LLMs and Software development",
+    "coverImageURL": "media/llama.jpg",
+    "summary": "Programming has never been easier! My thoughts on LLMs and their how they enhance the developer."
+  },
+  {
+    "id": 2,
+    "title": "Makefiles, A useful tool",
+    "coverImageURL": "media/gnumake.png",
+    "summary": "Introduction to Makefiles, what are they and how to use them to Build projects."
+  },
+  {
+    "id": 3,
+    "title": "Workflow and Workstation",
+    "coverImageURL": "media/fedora.png",
+    "summary": "Review of the tools that I use and those I have used/tried in the past."
+  },
+  {
+    "id": 4,
+    "title": "Resource Handling React.js Tutorial",
+    "coverImageURL": "media/reactjs.jpg",
+    "summary": "A tutorial/explanation of how I handle resources like blogs and projects on this website."
+  }
+]

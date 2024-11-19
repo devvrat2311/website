@@ -1,0 +1,27 @@
+.image {
+  height: 30vh;
+  display: block;
+  margin: auto;
+}
+
+.heading {
+  color: var(--color-secondary);
+  margin-bottom: 0;
+}
+
+.link {
+  color: var(--color-secondary);
+}
+
+.paragraph {
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+}
+
+.inline-code {
+  display: inline;
+}
+
+.definition {
+  margin-bottom: 0;
+}

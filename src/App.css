@@ -1,0 +1,497 @@
+/*Home is the home and it's media variations are a template for consistent grid views of things*/
+.home {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin: 5px;
+}
+@media (max-width: 600px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 1400px) {
+  .home {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.slides {
+  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
+  max-height: 40%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(300px, auto);
+  gap: 10px;
+  overflow: scroll;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+  transition: 0.3s;
+  scrollbar-color: var(--color-secondary);
+  scrollbar-highlight-color: var(--color-accent);
+  scroll-margin: 2px;
+}
+
+.Card {
+  border: 2px solid var(--foreground-dark);
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  width: 140px;
+  max-width: 200px;
+  display: inline-block;
+  transition: 0.2s ease-in-out;
+}
+
+.Card:hover {
+  box-shadow: 10px 10px var(--foreground-dark);
+  transform: translateY(-10px) translateX(-10px);
+  cursor: pointer;
+}
+
+.Card img {
+  font-size: 10px;
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+#title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: "EnvyCoder Nerd Font";
+}
+
+.blogpreview {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text);
+  border: solid 3px var(--color-muted);
+  border-radius: 0;
+  padding: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.blogpreview img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.blogpreview:hover {
+  box-shadow: 8px 8px var(--color-accent);
+  transform: translateY(-5px) translateX(-5px);
+  /* border-color: var(--color-accent); */
+}
+
+/* .blogpreview:active {
+  transform: translateY(5px) translateX(5px);
+  box-shadow: none;
+} */
+
+.blogpreview button {
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1px;
+  /* float: right; */
+  border: 1px solid;
+  background-color: transparent;
+  border-radius: 0;
+  border-color: transparent;
+  color: var(--color-muted);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.blogpreview button:hover {
+  color: var(--color-background);
+  background-color: var(--color-accent);
+}
+
+#blogAuthor {
+  font-style: italic;
+  text-align: right;
+}
+
+.projectpreview {
+  font-family: "EnvyCoder Nerd Font Mono";
+  border: 2px solid var(--color-muted);
+  border-radius: 10px;
+  padding: 5px 15px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectpreview button {
+  float: right;
+  color: var(--color-text);
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+}
+
+.showtime {
+  position: absolute;
+  top: 1rem;
+  right: 2.3rem;
+  color: var(--color-accent);
+}
+
+.fullscreen-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  top: 120px;
+  bottom: 15px;
+  right: 5%;
+  left: 5%;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background-color: var(--color-bg-lucent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blue(10px); /*safari support*/
+  font-weight: 600;
+  transform: translateY(110%);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1000;
+  border: 6px solid var(--color-accent);
+}
+
+.fullscreen-menu.open {
+  transform: translateY(0);
+}
+
+.fullscreen-menu ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.fullscreen-menu li {
+  padding: 0.3vh;
+  transform: translateX(0);
+  transition: transform 0.25s ease-in-out;
+  font-family: "BigBlueFont";
+}
+
+.fullscreen-menu li:hover {
+  transform: translateX(20px);
+  cursor: pointer;
+}
+
+/* .fullscreen-menu li:active {
+  transform: translateX(-20px);
+} */
+
+.fullscreen-menu a {
+  font-size: 2rem;
+  line-height: 3rem;
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+@media (max-height: 400px) {
+  .fullscreen-menu a {
+    font-size: 1.5rem;
+    line-height: 1rem;
+  }
+  .fullscreen-menu ul {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.themeContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 10;
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+}
+
+.themesBtn {
+  font-family: "EnvyCoder Nerd Font";
+  color: var(--color-text);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-accent);
+  border-radius: 0;
+  padding: 3px;
+  margin: 3px;
+  cursor: pointer;
+  width: 116px;
+}
+
+.themesMenu {
+  background-color: var(--color-background);
+  border: 2px solid var(--color-accent);
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 1002;
+  height: 0;
+  width: 106px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  margin: 3px;
+  padding: 3px;
+  position: relative;
+  top: -7px;
+}
+
+/* @media (max-width: 520px) {
+  .themesMenu {
+    right: 3px;
+  }
+} */
+
+@media (max-width: 520px) {
+  .themeContainer {
+    visibility: hidden;
+  }
+  .showtime {
+    visibility: hidden;
+  }
+}
+
+.themesMenu.open {
+  visibility: visible;
+}
+
+.themesMenu li {
+  padding: 2px 5px;
+  margin: 0;
+  background-color: var(--color-muted);
+  transition: 0.2s;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+.themesMenu button {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+.themesMenu li:hover {
+  background-color: var(--color-muted);
+}
+
+.hamburger {
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1001;
+  margin-right: 5px;
+  margin: 5px;
+  padding: 3px;
+  border-radius: 15px;
+  position: relative;
+  top: 5px;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 700ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition:
+    stroke-dasharray 400ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* Some cool effects that I would like to re-use*/
+
+/*text effects*/
+.fillcolor {
+  display: inline-block;
+  color: var(--color-text);
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.15s;
+  z-index: 1;
+  padding: 10px;
+  width: 100%;
+}
+
+.fillcolor:hover {
+  color: var(--color-text);
+}
+
+.fillcolor::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-primary);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.fillcolor:hover::before {
+  transform: translateX(0);
+}
+
+.underline {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-text);
+  float: right;
+}
+
+.highlightCurrentLink {
+  position: relative;
+  color: var(--color-accent);
+  text-decoration: none;
+  /* font-size: 2rem; */
+  font-weight: 600;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -0.25rem;
+  left: 0;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.underline:hover::before {
+  width: 100%;
+}
+
+.underlineV2 {
+  position: relative;
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+
+.underlineV2::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.underlineV2:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.fillcolor2 {
+  position: relative;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color-primary);
+  transition: 0.3s ease;
+  z-index: 0;
+  padding: 5px;
+}
+
+.fillcolor2::before {
+  content: "";
+  position: absolute;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-text);
+  transition: 0.3s ease;
+  transition-delay: 0.1s;
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.fillcolor2:hover::before {
+  height: 100%;
+}
+
+.fillcolor2:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.fillcolorV2 {
+  position: relative;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.fillcolorV2::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-muted);
+  transition: width 0.5s ease;
+  transition-delay: 0.3s;
+  z-index: -1;
+}
+
+.fillcolorV2:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.fillcolorV2:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+}

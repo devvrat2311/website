@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "dev23",
+    "bio": "I like coffee",
+    "profilePicture": "kitty1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "monu11",
+    "bio": "I don't like coffee, I love it",
+    "profilePicture": "cat1.jpg"
+  }
+]

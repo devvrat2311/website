@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "GorillaType",
+    "brief": "typing test for terminal emulators, inspired by MonkeyType",
+    "screenshots": [
+      "/media/cat1.jpg",
+      "/media/kitty1.jpg",
+      "/media/cat1.jpg",
+      "/media/kitty1.jpg"
+    ],
+    "tags": ["C"],
+    "status": "ongoing",
+    "github": "githubLinkHere"
+  },
+  {
+    "id": 2,
+    "name": "termGraphics",
+    "brief": "Basic objects rendering in the terminal",
+    "screenshots": ["/media/cat1.jpg", "/media/kitty1.jpg"],
+    "tags": ["C++"],
+    "status": "ongoing",
+    "github": "githubLinkHere"
+  },
+  {
+    "id": 3,
+    "name": "Algolib",
+    "brief": "Algorithms and programs from Introduction to Algorithms -CLRS",
+    "screenshots": ["/media/cat1.jpg", "/media/kitty1.jpg"],
+    "tags": ["C++"],
+    "status": "ongoing",
+    "github": "githubLinkHere"
+  },
+  {
+    "id": 4,
+    "name": "Time-2-Quit",
+    "brief": "It's time to quit that habit that's been destroying you.",
+    "screenshots": ["/media/cat1.jpg", "/media/kitty1.jpg"],
+    "tags": ["C"],
+    "status": "ongoing",
+    "github": "githubLinkHere"
+  },
+  {
+    "id": 5,
+    "name": "2d Platformer",
+    "brief": "A 2d platformer written with SFML, no game engine used.",
+    "screenshots": ["/media/cat1.jpg", "/media/kitty1.jpg"],
+    "tags": ["C++"],
+    "status": "ongoing",
+    "github": "githubLinkHere"
+  }
+]

@@ -1,0 +1,25 @@
+.projectmain,
+.heading,
+.paragraph {
+  font-family: "EnvyCoder Nerd Font Mono";
+}
+.projectmain {
+  border: 2px solid var(--color-muted);
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.projectmain a {
+  color: var(--color-accent);
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  margin: 20px 0;
+}
+
+.paragraph {
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
