@@ -39,7 +39,7 @@ function NavMenu() {
           {menuItems.map(({ name, path, pathalias }) => (
             <li key={name}>
               <a href={pathname !== path ? path : null}>
-                {pathname === path || pathname === pathalias ? "󰫣 " : null}
+                {pathname === path || pathname === pathalias ? "> " : null}
                 {name}
               </a>
             </li>
@@ -51,7 +51,8 @@ function NavMenu() {
     <ul
       style={{
         fontSize: "1.5rem",
-        fontFamily: "Josefin Sans",
+        fontFamily: "Montserrat",
+        fontWeight: "800",
       }}
     >
       {menuItems.map(({ name, path, pathalias }) => (
