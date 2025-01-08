@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
-function ThemeSelector() {
+function ThemeSelector({Position}) {
   const themesList = [
     { name: "light" },
     { name: "nord" },
     { name: "peach" },
     { name: "midnight" },
+    { name: "orange" },
   ]; //array of theme objects to .map() over and render theming options
   let sizeOfList = themesList.length;
   sizeOfList *= 25;
@@ -33,7 +34,7 @@ function ThemeSelector() {
 
   return (
     <>
-      <div className="themeContainer">
+      <div className={`${Position ? "themeContainer" : "themeContainerTwo"}`}>
         <button className="themesBtn" onClick={toggleThemeMenu}>
           {theme.substring(0, theme.length - 6)}
         </button>

@@ -1,7 +1,11 @@
 .projectmain,
 .heading,
 .paragraph {
-  font-family: "EnvyCoder Nerd Font Mono";
+  font-family: "Space Mono";
+}
+
+.subheading {
+  margin-top: 40px;
 }
 .projectmain {
   border: 2px solid var(--color-muted);
@@ -15,8 +19,20 @@
 
 .heading {
   font-size: 3rem;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 1.7rem;
+  }
 }
 
 .paragraph {

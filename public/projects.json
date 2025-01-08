@@ -4,10 +4,8 @@
     "name": "GorillaType",
     "brief": "typing test for terminal emulators, inspired by MonkeyType",
     "screenshots": [
-      "/media/cat1.jpg",
-      "/media/kitty1.jpg",
-      "/media/cat1.jpg",
-      "/media/kitty1.jpg"
+      {"type":"video" ,"src":"/media/gorillaTypeVideo.webm"},
+      {"type":"photo" ,"src":"/media/structure.png"}
     ],
     "tags": ["C"],
     "status": "ongoing",

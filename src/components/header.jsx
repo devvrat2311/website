@@ -1,26 +1,9 @@
 import NavMenu from "./navMenu";
-import ThemeSelector from "./themeSelector";
-import { useEffect, useState } from "react";
+// import ThemeSelector from "./themeSelector";
+// import { useEffect, useState } from "react";
+// import ShowTime from "./showTime";
 
 function Header() {
-  const [time, setTime] = useState(new Date().toLocaleTimeString());
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const formattedTime = now.toLocaleString([], {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      setTime(formattedTime);
-    };
-
-    updateTime();
-
-    const intervalId = setInterval(updateTime, 60000);
-
-    return () => clearInterval(intervalId);
-  }, []);
   return (
     <header>
       <div
@@ -32,10 +15,11 @@ function Header() {
         }}
       >
         <p>Dev_023</p>
-        <span className="showtime">{time}</span>
+        {/* <span className="showtime">{time}</span> */}
+        {/* <ShowTime /> */}
       </div>
       <NavMenu />
-      <ThemeSelector />
+      {/* <ThemeSelector Position={1}/> */}
     </header>
   );
 }

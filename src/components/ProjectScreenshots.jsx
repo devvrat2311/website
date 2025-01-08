@@ -44,7 +44,18 @@ function ProjectScreenshots({ project_id }) {
       >
         {screenshots.map((screenshot, index) => (
           <div className="slide" key={index}>
-            <img className="screenshots" src={screenshot} />
+            {/* <img className="screenshots" src={screenshot} /> */}
+            {/* <video className="screenshots" src={screenshot} /> */}
+            {screenshot.type === "photo" ? (
+            <img
+              className="screenshots"
+              src={screenshot.src}
+              />
+            ) : (
+              <video width="750" height="500" controls loop>
+                <source src={screenshot.src} type="video/webm"/>
+              </video>
+            )}
           </div>
         ))}
       </div>

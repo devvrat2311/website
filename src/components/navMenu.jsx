@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CoolBtn from "./coolBtn";
+import ThemeSelector from "./themeSelector";
+import ShowTime from "./showTime";
 
 function NavMenu() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,16 +40,20 @@ function NavMenu() {
         <ul>
           {menuItems.map(({ name, path, pathalias }) => (
             <li key={name}>
-              <a href={pathname !== path ? path : null}>
-                {pathname === path || pathname === pathalias ? "> " : null}
+              <a className={`navlink ${pathname === pathalias || pathname === path ? "active" : null}`} href={pathname !== path ? path : null}>
+                {/* {pathname === path || pathname === pathalias ? "> " : null} */}
                 {name}
               </a>
             </li>
           ))}
         </ul>
+
+        <ThemeSelector Position={0}/>
+        <ShowTime Position={0}/>
       </div>
     </>
   ) : (
+    <div>
     <ul
       style={{
         fontSize: "1.5rem",
@@ -70,6 +76,9 @@ function NavMenu() {
         </li>
       ))}
     </ul>
+      <ThemeSelector Position={1} />
+      <ShowTime Position={1}/>
+    </div>
   );
 }
 
