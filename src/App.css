@@ -194,6 +194,7 @@
   top: 84px;
   bottom: 0;
   right: 0;
+  border-left: 4px solid var(--color-accent);
   /* left: 0; */
   width: 300px;
   height: auto;
